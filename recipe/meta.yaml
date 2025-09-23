@@ -1,5 +1,5 @@
 {% set name = "reboost" %}
-{% set version = "0.6.2" %}
+{% set version = "0.7.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/reboost-{{ version }}.tar.gz
-  sha256: 5249cee35becaac32347a46e7034a1304c000d5183d6d6c6830fdfe142baf8f8
+  sha256: b2ac7fd178e0649e43ab314d4090b20e77cbc46d3bdc6e492ff599aefec4a4c3
 
 build:
   noarch: python
