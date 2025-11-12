@@ -1,5 +1,5 @@
 {% set name = "reboost" %}
-{% set version = "0.7.0" %}
+{% set version = "0.8.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/reboost-{{ version }}.tar.gz
-  sha256: b2ac7fd178e0649e43ab314d4090b20e77cbc46d3bdc6e492ff599aefec4a4c3
+  sha256: 0ed481704e306381bd63f089bd2e6140abc0f98eb1441a554fa5a8b978ca585c
 
 build:
   noarch: python
@@ -30,7 +30,7 @@ requirements:
     - colorlog
     - numpy
     - scipy
-    - numba
+    - numba >=0.60
     - legend-pydataobj >=1.15.1
     - legend-pygeom-optics >=0.12.0
     - legend-pygeom-tools >=0.0.11
