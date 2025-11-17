@@ -1,5 +1,5 @@
 {% set name = "reboost" %}
-{% set version = "0.8.0" %}
+{% set version = "0.8.1" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/reboost-{{ version }}.tar.gz
-  sha256: 0ed481704e306381bd63f089bd2e6140abc0f98eb1441a554fa5a8b978ca585c
+  sha256: d20c74e6135b93298e4849b9957087bc0ba324e58a29c3725a807cfff1da95e6
 
 build:
   noarch: python
@@ -25,6 +25,7 @@ requirements:
     - setuptools-scm >=7
     - pip
   run:
+    - legend-pygeom-hpges
     - python >={{ python_min }}
     - hdf5plugin
     - colorlog
