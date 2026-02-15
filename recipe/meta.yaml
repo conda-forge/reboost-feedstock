@@ -1,5 +1,5 @@
 {% set name = "reboost" %}
-{% set version = "0.10.0" %}
+{% set version = "0.10.1" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/reboost-{{ version }}.tar.gz
-  sha256: d54f1c2dda5f9031f6b1e2f9c5ec0c454361a0c86416a5c652f7f1613fbe3fa1
+  sha256: 80fdef40a6b7b0b34b2ab98e612e5fe1eef88b7aae8059657f0d6054b638d934
 
 build:
   noarch: python
@@ -32,7 +32,7 @@ requirements:
     - numpy
     - scipy
     - numba >=0.60
-    - legend-pydataobj >=1.15.1
+    - legend-pydataobj >=1.17.2
     - legend-pygeom-optics >=0.15.0
     - legend-pygeom-tools >=0.0.26
     - hist
