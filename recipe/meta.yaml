@@ -43,6 +43,7 @@ requirements:
     - matplotlib-base
     - pygama
     - pyg4ometry
+    - __unix
 
 test:
   imports:
