@@ -11,7 +11,7 @@ Summary: LEGEND Monte-Carlo simulation post-processing
 
 Development: https://github.com/legend-exp/reboost
 
-Documentation: https://reboost.readthedocs.io
+Documentation: https://reboost.readthedocs.io/
 
 Current build status
 ====================

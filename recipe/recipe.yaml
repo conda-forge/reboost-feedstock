@@ -1,0 +1,75 @@
+schema_version: 1
+
+context:
+  name: reboost
+  version: "0.12.0"
+  python_min: "3.11"
+  python_check_max: "3.14"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/reboost-${{ version }}.tar.gz
+  sha256: 54671edf411d35aa9e8152fa0be41080e7a77a39cee7dc3827b9cc625c92856d
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
+  python:
+    entry_points:
+      - reboost-optical = reboost.optmap.cli:optical_cli
+      - reboost = reboost.cli:cli
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - setuptools >=77
+    - setuptools-scm >=7
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - hdf5plugin
+    - colorlog
+    - numpy
+    - scipy
+    - numba >=0.60
+    - legend-pydataobj >=2.0.1
+    - legend-lh5io >=0.2
+    - legend-pygeom-hpges
+    - legend-pygeom-optics >=0.15.0
+    - legend-pygeom-tools >=0.0.26
+    - hist
+    - dbetto
+    - particle
+    - pandas
+    - matplotlib-base
+    - pygama
+    - pyg4ometry
+
+tests:
+  - python:
+      imports:
+        - reboost
+      pip_check: true
+      python_version:
+        - ${{ python_min }}
+        - ${{ python_check_max }}.*
+  - script:
+      - reboost -h
+      - reboost-optical -h
+
+about:
+  summary: LEGEND Monte-Carlo simulation post-processing
+  license: GPL-3.0-only
+  license_file: LICENSE
+  homepage: https://github.com/legend-exp/reboost
+  repository: https://github.com/legend-exp/reboost
+  documentation: https://reboost.readthedocs.io
+
+extra:
+  recipe-maintainers:
+    - gipert
+    - ManuelHu
