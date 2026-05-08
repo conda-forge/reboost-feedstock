@@ -1,6 +1,6 @@
 {% set name = "reboost" %}
 {% set version = "0.12.0" %}
-{% set python_min = "3.10" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
