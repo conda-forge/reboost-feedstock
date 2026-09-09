@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: reboost
-  version: "0.13.0"
+  version: "1.0.0"
   python_min: "3.11"
   python_check_max: "3.14"
 
@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/reboost-${{ version }}.tar.gz
-  sha256: 8168b11d60f1a498c4c09d3e0417b66aecbfa9e0d71cf40478d6ebdad8b33031
+  sha256: 30195c493b32b4e2742613faa0f569d5a3cb36124c7e844338465a90f68352e9
 
 build:
   number: 0
@@ -21,7 +21,6 @@ build:
   python:
     entry_points:
       - reboost-optical = reboost.optmap.cli:optical_cli
-      - reboost = reboost.cli:cli
 
 requirements:
   host:
@@ -48,6 +47,7 @@ requirements:
     - matplotlib-base
     - pygama
     - pyg4ometry
+    - psutil
 
 tests:
   - python:
@@ -58,7 +58,6 @@ tests:
         - ${{ python_min }}
         - ${{ python_check_max }}.*
   - script:
-      - reboost -h
       - reboost-optical -h
 
 about:
