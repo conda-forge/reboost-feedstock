@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: reboost
-  version: "1.2.0"
+  version: "1.2.1"
   python_min: "3.11"
   python_check_max: "3.14"
 
@@ -11,8 +11,8 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/reboost-${{ version }}.tar.gz
-  sha256: 95e9855dd8fa81ca9273814a5b3d79e5f7603aab6a5972a0cdf825c1604f849a
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: c45de6bce23a33cc2c5b2607fbda2fb0e9d05689ccffe241c52652a530fb352b
 
 build:
   number: 0
