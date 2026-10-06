@@ -58,7 +58,7 @@ tests:
         - ${{ python_min }}
         - ${{ python_check_max }}.*
   - script:
-      - reboost-optical -h
+      - reboost-optmap -h
 
 about:
   summary: LEGEND Monte-Carlo simulation post-processing
