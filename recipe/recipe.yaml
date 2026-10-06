@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: reboost
-  version: "1.3.1"
+  version: "1.4.0"
   python_min: "3.11"
   python_check_max: "3.14"
 
@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 48c194891101867216714a00cf4267e6a978b750c6ba36e866d1d89baa08afa1
+  sha256: 1189f286a1460a151fec7a52f6ac2156c8f5a17aa03be7a0df3a87d15ce94e82
 
 build:
   number: 0
@@ -20,7 +20,7 @@ build:
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
   python:
     entry_points:
-      - reboost-optical = reboost.optmap.cli:optical_cli
+      - reboost-optmap = reboost.optmap.cli:optmap_cli
 
 requirements:
   host:
@@ -58,7 +58,7 @@ tests:
         - ${{ python_min }}
         - ${{ python_check_max }}.*
   - script:
-      - reboost-optical -h
+      - reboost-optmap -h
 
 about:
   summary: LEGEND Monte-Carlo simulation post-processing
