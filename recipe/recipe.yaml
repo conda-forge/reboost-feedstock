@@ -20,7 +20,7 @@ build:
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
   python:
     entry_points:
-      - reboost-optical = reboost.optmap.cli:optical_cli
+      - reboost-optmap = reboost.optmap.cli:optmap_cli
 
 requirements:
   host:
