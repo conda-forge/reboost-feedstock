@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: reboost
-  version: "1.4.1"
+  version: "1.4.2"
   python_min: "3.11"
   python_check_max: "3.14"
 
@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: e1bb3681bf5e098eb0ee249a09c6b79c030b7c758b27a61f6c815bb9879e2a5e
+  sha256: 7a7ada544842e8a1ad7188d2b57bfa5f57f8b8d3eb71e72be3dc4a5ed4483b2d
 
 build:
   number: 0
@@ -42,7 +42,6 @@ requirements:
     - legend-pygeom-tools >=0.0.26
     - hist
     - dbetto
-    - particle
     - pandas
     - matplotlib-base
     - pygama
